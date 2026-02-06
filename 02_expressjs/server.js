@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    const id = Number(req.params);
+    const id = Number(req.params.id);
     const index = cars.findIndex(c => c.id === id);
 
     if(index === -1) {
@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    const id = Number(req.params);
+    const id = Number(req.params.id);
     const index = cars.findIndex(c => c.id === id);
 
     if(index === -1) {
